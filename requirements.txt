@@ -1,0 +1,26 @@
+# Mortgage Risk Decision System dependencies
+# Python >= 3.10
+#
+# Install:
+#   pip install -r requirements.txt
+# On restricted system Python (if needed):
+#   pip install -r requirements.txt --break-system-packages
+
+# Data layer
+duckdb>=1.1.0
+pyarrow>=16.0.0
+polars>=0.20.0
+pandas>=2.1.0
+
+# ML
+xgboost>=2.0.0
+scikit-learn>=1.4.0
+shap>=0.45.0
+torch>=2.2.0
+
+# Visualization
+matplotlib>=3.8.0
+
+# Utilities
+requests>=2.31.0
+tqdm>=4.66.0

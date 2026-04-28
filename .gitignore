@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local editor and OS files
+.DS_Store
+.idea/
+.vscode/
+
+# Project data and generated artifacts
+data/
+outputs/
+logs/
+Performance_All.zip
+
+# Temporary files
+*.tmp
+*.temp
