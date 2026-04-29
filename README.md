@@ -467,8 +467,14 @@ The current system is operationally useful as a top-k ranker. The improvements I
 
 ## Read more
 
-- **`Mortgage_Risk_Paper.docx`** — eight sections plus appendices, 19 pages. The full methodology, descriptive analysis (Table 1: cohort sizes and prevalences), the XGBoost-vs-MTL comparison (Tables 2 and 3), calibration diagnostics, SHAP analysis, and a candid discussion of where the multi-task model wins and where it loses.
+- **`Mortgage_Risk_Paper.docx`** — eight sections plus appendices, 20 pages. The full methodology, descriptive analysis (Table 1: cohort sizes and prevalences), the XGBoost-vs-MTL comparison (Tables 2 and 3), calibration diagnostics, SHAP analysis, and a candid discussion of where the multi-task model wins and where it loses.
 - **`Mortgage_Risk_Slides.pptx`** — fifteen slides for a 20-minute non-technical briefing. Each slide carries a "Business Takeaway" band so a busy reader can skim the headlines in 3 minutes.
+
+---
+
+## More work
+
+For additional projects and work, see: https://yuanyuanxie11.github.io/
 
 ---
 
