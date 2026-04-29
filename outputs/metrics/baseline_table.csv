@@ -1,0 +1,5 @@
+target,split,n,prevalence,pr_auc,roc_auc,brier,recall@5pct,recall@10pct,recall@20pct,random_recall@5pct,random_recall@10pct,random_recall@20pct
+delinq,val,4336086,0.0062,0.3672,0.9198,0.0418,0.6755,0.7582,0.8554,0.05,0.1,0.2
+delinq,test,3947403,0.0344,0.4199,0.8846,0.0645,0.5258,0.6326,0.7642,0.05,0.1,0.2
+prepay,val,4336086,0.0759,0.2299,0.6603,0.1018,0.1773,0.2545,0.3826,0.05,0.1,0.2
+prepay,test,3947403,0.2854,0.4517,0.6912,0.2246,0.0884,0.1234,0.2962,0.05,0.1,0.2

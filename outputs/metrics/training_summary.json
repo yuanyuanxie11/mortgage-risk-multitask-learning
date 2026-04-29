@@ -1,0 +1,22 @@
+[
+  {
+    "target": "delinq",
+    "best_round": 102,
+    "train_prevalence": 0.008790278946411621,
+    "val_prevalence": 0.006188761016271356,
+    "n_train": 34792525,
+    "n_val": 4336086,
+    "elapsed_sec": 453,
+    "model_path": "/nfs/home/ucb9673/mortgage-risk-multitask-learning/outputs/models/xgb_delinq.ubj"
+  },
+  {
+    "target": "prepay",
+    "best_round": 262,
+    "train_prevalence": 0.17104136592558317,
+    "val_prevalence": 0.07591154787981604,
+    "n_train": 34792525,
+    "n_val": 4336086,
+    "elapsed_sec": 798,
+    "model_path": "/nfs/home/ucb9673/mortgage-risk-multitask-learning/outputs/models/xgb_prepay.ubj"
+  }
+]

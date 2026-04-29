@@ -1,0 +1,7 @@
+{
+  "best_epoch": 33,
+  "best_joint_pr_auc": 0.30924801472091434,
+  "epochs_ran": 39,
+  "seed": 42,
+  "device": "cpu"
+}
