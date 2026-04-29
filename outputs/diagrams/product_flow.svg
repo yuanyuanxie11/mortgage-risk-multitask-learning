@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" font-family="Calibri, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#21295C"/>
+    </marker>
+    <marker id="arrCoral" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#B85042"/>
+    </marker>
+    <marker id="arrMute" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#6B7B8C"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="600" y="34" text-anchor="middle" font-size="22" font-weight="700" fill="#21295C">How the system turns 4.3M loans into 14.6K well-targeted calls</text>
+  <text x="600" y="58" text-anchor="middle" font-size="14" fill="#6B7B8C">Validation cohort, top-5% operating point</text>
+
+  <!-- Step boxes (top row) -->
+  <!-- 1. BOOK -->
+  <rect x="40" y="100" width="170" height="100" rx="10" fill="#CADCFC" stroke="#065A82" stroke-width="2"/>
+  <text x="125" y="130" text-anchor="middle" font-size="13" font-weight="700" fill="#21295C" letter-spacing="1">YOUR BOOK</text>
+  <text x="125" y="158" text-anchor="middle" font-size="22" font-weight="700" fill="#065A82">4.3M</text>
+  <text x="125" y="180" text-anchor="middle" font-size="13" fill="#21295C">active loans</text>
+
+  <!-- 2. MODEL -->
+  <rect x="240" y="100" width="170" height="100" rx="10" fill="#1C7293" stroke="#065A82" stroke-width="2"/>
+  <text x="325" y="130" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" letter-spacing="1">SCORE</text>
+  <text x="325" y="158" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">XGBoost + MTL</text>
+  <text x="325" y="180" text-anchor="middle" font-size="13" fill="#CADCFC">risk per loan</text>
+
+  <!-- 3. RANK -->
+  <rect x="440" y="100" width="170" height="100" rx="10" fill="#065A82" stroke="#21295C" stroke-width="2"/>
+  <text x="525" y="130" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" letter-spacing="1">RANK</text>
+  <text x="525" y="158" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">High → Low</text>
+  <text x="525" y="180" text-anchor="middle" font-size="13" fill="#CADCFC">sorted list</text>
+
+  <!-- 4. DECIDE (diamond) -->
+  <polygon points="725,150 810,100 895,150 810,200" fill="#F9E795" stroke="#21295C" stroke-width="2"/>
+  <text x="810" y="142" text-anchor="middle" font-size="13" font-weight="700" fill="#21295C" letter-spacing="1">CAPACITY?</text>
+  <text x="810" y="162" text-anchor="middle" font-size="14" font-weight="700" fill="#21295C">Top 5%</text>
+
+  <!-- 5. ACTION -->
+  <rect x="930" y="100" width="230" height="100" rx="10" fill="#21295C" stroke="#065A82" stroke-width="2"/>
+  <text x="1045" y="130" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" letter-spacing="1">SERVICER OUTREACH</text>
+  <text x="1045" y="158" text-anchor="middle" font-size="22" font-weight="700" fill="#FFFFFF">217K loans</text>
+  <text x="1045" y="180" text-anchor="middle" font-size="13" fill="#CADCFC">proactive contact</text>
+
+  <!-- Arrows top row -->
+  <line x1="210" y1="150" x2="240" y2="150" stroke="#21295C" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="410" y1="150" x2="440" y2="150" stroke="#21295C" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="610" y1="150" x2="725" y2="150" stroke="#21295C" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="895" y1="150" x2="930" y2="150" stroke="#21295C" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- "No action" branch -->
+  <line x1="810" y1="200" x2="810" y2="260" stroke="#6B7B8C" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrMute)"/>
+  <rect x="700" y="265" width="220" height="50" rx="8" fill="#FFFFFF" stroke="#6B7B8C" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="810" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#6B7B8C" letter-spacing="1">NO ACTION</text>
+  <text x="810" y="302" text-anchor="middle" font-size="12" fill="#6B7B8C">remaining 95% of the book — monitor only</text>
+
+  <!-- Outcome callout -->
+  <rect x="930" y="265" width="230" height="120" rx="10" fill="#FFFFFF" stroke="#B85042" stroke-width="2"/>
+  <text x="1045" y="290" text-anchor="middle" font-size="12" font-weight="700" fill="#B85042" letter-spacing="1">OUTCOME</text>
+  <text x="1045" y="318" text-anchor="middle" font-size="22" font-weight="700" fill="#B85042">14.6K</text>
+  <text x="1045" y="340" text-anchor="middle" font-size="13" fill="#21295C">true 90+ delinquencies</text>
+  <text x="1045" y="360" text-anchor="middle" font-size="13" fill="#21295C">caught early</text>
+  <text x="1045" y="378" text-anchor="middle" font-size="11" fill="#6B7B8C">= 67.6% recall @ 5%</text>
+
+  <line x1="1045" y1="200" x2="1045" y2="265" stroke="#B85042" stroke-width="2" marker-end="url(#arrCoral)"/>
+
+  <!-- Comparison strip at bottom -->
+  <rect x="40" y="405" width="1120" height="40" rx="6" fill="#F2F4F7"/>
+  <text x="60" y="430" font-size="13" font-weight="700" fill="#21295C">vs. random outreach:</text>
+  <text x="220" y="430" font-size="13" fill="#21295C">5% capture rate at the same calling capacity →</text>
+  <text x="540" y="430" font-size="14" font-weight="700" fill="#B85042">13.5× more delinquencies caught</text>
+  <text x="800" y="430" font-size="12" fill="#6B7B8C">— same team, same hours, same budget.</text>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" font-family="Calibri, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="aw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#21295C"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="600" y="34" text-anchor="middle" font-size="22" font-weight="700" fill="#21295C">Leakage-safe windows: features and labels never overlap</text>
+  <text x="600" y="58" text-anchor="middle" font-size="14" fill="#6B7B8C">For each loan, features come from one slice of time and labels from a strictly later slice</text>
+
+  <!-- Timeline base -->
+  <line x1="100" y1="200" x2="1100" y2="200" stroke="#21295C" stroke-width="2"/>
+
+  <!-- Tick marks -->
+  <g font-size="12" fill="#21295C" font-weight="700" text-anchor="middle">
+    <line x1="120" y1="195" x2="120" y2="215" stroke="#21295C" stroke-width="2"/>
+    <text x="120" y="232">Month 0</text>
+    <text x="120" y="248" font-size="11" font-weight="400" fill="#6B7B8C">origination</text>
+
+    <line x1="540" y1="195" x2="540" y2="215" stroke="#21295C" stroke-width="2"/>
+    <text x="540" y="232">Month 12</text>
+
+    <line x1="600" y1="195" x2="600" y2="215" stroke="#21295C" stroke-width="2"/>
+    <text x="600" y="232">Month 13</text>
+
+    <line x1="1020" y1="195" x2="1020" y2="215" stroke="#21295C" stroke-width="2"/>
+    <text x="1020" y="232">Month 24</text>
+  </g>
+
+  <!-- Feature window band -->
+  <rect x="120" y="120" width="420" height="60" rx="8" fill="#1C7293"/>
+  <text x="330" y="148" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF" letter-spacing="2">FEATURE WINDOW</text>
+  <text x="330" y="168" text-anchor="middle" font-size="12" fill="#CADCFC">months 0–12 — what the model gets to see</text>
+
+  <!-- Label window band -->
+  <rect x="600" y="120" width="420" height="60" rx="8" fill="#B85042"/>
+  <text x="810" y="148" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF" letter-spacing="2">LABEL WINDOW</text>
+  <text x="810" y="168" text-anchor="middle" font-size="12" fill="#FCF6F5">months 13–24 — what the model is asked to predict</text>
+
+  <!-- Gap annotation -->
+  <text x="570" y="148" text-anchor="middle" font-size="22" font-weight="700" fill="#21295C">|</text>
+  <text x="570" y="100" text-anchor="middle" font-size="11" font-weight="700" fill="#21295C">no overlap</text>
+  <text x="570" y="115" text-anchor="middle" font-size="10" fill="#6B7B8C">by construction</text>
+
+  <!-- Detail call-outs -->
+  <rect x="120" y="270" width="420" height="80" rx="8" fill="#FFFFFF" stroke="#1C7293" stroke-width="1.5"/>
+  <text x="330" y="294" text-anchor="middle" font-size="12" font-weight="700" fill="#1C7293" letter-spacing="1">WHAT'S MEASURED IN THE FEATURE WINDOW</text>
+  <text x="135" y="316" font-size="12" fill="#21295C">• 36 features: rate, UPB, OLTV, DTI, FICO, channel, state</text>
+  <text x="135" y="334" font-size="12" fill="#21295C">• 12-month behaviour: max DLQ, months 30+/60+/90+, mods</text>
+
+  <rect x="600" y="270" width="420" height="80" rx="8" fill="#FFFFFF" stroke="#B85042" stroke-width="1.5"/>
+  <text x="810" y="294" text-anchor="middle" font-size="12" font-weight="700" fill="#B85042" letter-spacing="1">WHAT'S MEASURED IN THE LABEL WINDOW</text>
+  <text x="615" y="316" font-size="12" fill="#21295C">• y_delinq_90p = 1 if DLQ status reaches 3+ at any point</text>
+  <text x="615" y="334" font-size="12" fill="#21295C">• y_prepay = 1 if zero-balance code = "01" (voluntary prepay)</text>
+
+  <!-- Bottom note -->
+  <text x="600" y="372" text-anchor="middle" font-size="12" font-style="italic" fill="#6B7B8C">No information from months 13–24 can ever appear in the feature row — the leakage guarantee is structural, not statistical.</text>
+</svg>
