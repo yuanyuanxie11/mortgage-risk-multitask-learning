@@ -436,23 +436,6 @@ All three are public data. No PII; no proprietary feeds.
 
 ---
 
-## Honest snapshot
-
-| Component | Status |
-|---|---|
-| Streaming ingestion (DuckDB → Parquet) | Complete |
-| Feature store + vintage-keyed splits | Complete |
-| FRED macro join | Complete |
-| FHFA HPI join | Best-effort auto-download with manual fallback |
-| Era-aware data-quality contract | Complete |
-| XGBoost baseline + SHAP | Complete |
-| PyTorch multi-task training + evaluation | Complete |
-| Stress-cohort (2020) evaluation | Reserved; not yet reported |
-| Post-hoc calibration | Identified as next step |
-| Propensity-adjusted intervention analysis | Roadmap |
-
----
-
 ## Next steps
 
 The current system is operationally useful as a top-k ranker. The improvements I would prioritise next are:
